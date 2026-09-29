@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b0d">
+    <title>Card Hero | Heróis</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <nav class="menu" aria-label="Navegação principal">
+        <a class="menu-logo" href="index.html">Card Hero</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <ul class="menu-links">
+            <li><a class="link" href="index.html#home">Início</a></li>
+            <li><a class="link" href="#herois">Heróis</a></li>
+            <li><a class="link" href="sobre.html">Sobre</a></li>
+            <li><a class="link" href="chat.html">Chat</a></li>
+            <li><a class="link" href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section">
+            <p class="hero-eyebrow">Seu guia pelo universo dos heróis</p>
+            <h1>Conheça os maiores heróis</h1>
+            <p>Descubra histórias, origens e poderes. Converse com o HeroBot para saber ainda mais.</p>
+            <a class="btn-acao" href="chat.html">Conversar com o HeroBot</a>
+        </section>
+
+        <section id="herois" class="vitrine-section">
+            <h2 class="titulo-secao">Vitrine de heróis</h2>
+            <div class="vitrine">
+                <article class="heroi" data-heroi="batman">
+                    <img src="images/Bat.jpg" alt="Batman em sua armadura">
+                    <h2>Batman</h2>
+                    <p>Bruce Wayne usa sua inteligência, preparo e tecnologia para proteger Gotham City.</p>
+                    <button class="btn-poderes" type="button">Ver poderes</button>
+                </article>
+                <article class="heroi" data-heroi="goku">
+                    <img src="images/Goku.jpg" alt="Goku pronto para lutar">
+                    <h2>Goku</h2>
+                    <p>Kakarotto, criado na Terra, tornou-se um dos maiores defensores do universo.</p>
+                    <button class="btn-poderes" type="button">Ver poderes</button>
+                </article>
+                <article class="heroi" data-heroi="spiderman">
+                    <img src="images/Homem.jpg" alt="Homem-Aranha em ação">
+                    <h2>Spider-Man</h2>
+                    <p>Peter Parker equilibra a vida de estudante com a responsabilidade de proteger Nova York.</p>
+                    <button class="btn-poderes" type="button">Ver poderes</button>
+                </article>
+                <article class="heroi" data-heroi="venom">
+                    <img src="images/Venom.jpg" alt="Venom mostrando suas presas">
+                    <h2>Venom</h2>
+                    <p>O simbionte e Eddie Brock formam um anti-herói de força e habilidades extraordinárias.</p>
+                    <button class="btn-poderes" type="button">Ver poderes</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 Card Hero</p>
+        <div class="rodape-links">
+            <a href="sobre.html">Sobre</a>
+            <a href="chat.html">Chat</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </footer>
+
+    <div id="modalPoderes" class="modal" aria-hidden="true">
+        <div class="modal-conteudo" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+            <button class="fechar-modal" type="button" aria-label="Fechar">&times;</button>
+            <h2 id="modalTitulo">Poderes</h2>
+            <ul id="modalListaPoderes"></ul>
+        </div>
+    </div>
+
+    <aside class="chatbot" id="chatbot" data-chat-interface aria-label="Chat com o HeroBot">
+        <button class="chatbot-botao" id="chatbotToggle" type="button" aria-label="Abrir chat">
+            <span class="chatbot-icone" aria-hidden="true">💬</span>
+        </button>
+        <div class="chatbot-janela" id="chatbotJanela">
+            <div class="chatbot-header">
+                <div>
+                    <h3>HeroBot</h3>
+                    <span class="chatbot-status"><span></span> Assistente de heróis</span>
+                </div>
+                <div class="chatbot-acoes">
+                    <button class="chatbot-limpar" id="chatbotLimpar" type="button" aria-label="Limpar conversa" title="Limpar conversa">↺</button>
+                    <button class="chatbot-fechar" id="chatbotFechar" type="button" aria-label="Fechar chat">✕</button>
+                </div>
+            </div>
+            <div class="chatbot-corpo" id="chatbotCorpo" aria-live="polite">
+                <div class="chat-msg bot">Olá! Pergunte sobre Batman, Goku, Spider-Man ou Venom.</div>
+            </div>
+            <div class="chatbot-sugestoes" aria-label="Sugestões de perguntas">
+                <button type="button" data-pergunta="Quais são os poderes do Batman?">Poderes do Batman</button>
+                <button type="button" data-pergunta="Qual é a origem do Goku?">Origem do Goku</button>
+            </div>
+            <form class="chatbot-input" id="chatbotForm">
+                <input type="text" id="chatInput" placeholder="Pergunte sobre um herói..." autocomplete="off" maxlength="500" required>
+                <button type="submit" id="chatEnviar" aria-label="Enviar mensagem">➤</button>
+            </form>
+        </div>
+    </aside>
+</body>
+</html>

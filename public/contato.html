@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b0d">
+    <title>Contato | Card Hero</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/app.js"></script>
+</head>
+<body>
+    <nav class="menu" aria-label="Navegação principal">
+        <a class="menu-logo" href="index.html">Card Hero</a>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+        <ul class="menu-links">
+            <li><a class="link" href="index.html#home">Início</a></li>
+            <li><a class="link" href="index.html#herois">Heróis</a></li>
+            <li><a class="link" href="sobre.html">Sobre</a></li>
+            <li><a class="link" href="chat.html">Chat</a></li>
+            <li><a class="link" href="contato.html" aria-current="page">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="contato-section pagina-conteudo">
+            <div class="contato-intro">
+                <p class="hero-eyebrow">Fale com a equipe</p>
+                <h1 class="titulo-secao">Entre em contato</h1>
+                <p class="contato-descricao">Tem uma dúvida, sugestão ou encontrou algo que podemos melhorar? Envie uma mensagem para a equipe Card Hero.</p>
+            </div>
+            <div class="contato-conteudo contato-layout">
+                <aside class="contato-info" aria-label="Canais de contato">
+                    <div class="contato-info-intro">
+                        <h2>Canais de contato</h2>
+                        <p>Escolha o canal mais conveniente para falar com a gente.</p>
+                    </div>
+                    <a class="info-item" href="mailto:cardhero.contato@herois.com"><span class="info-icone" aria-hidden="true">📧</span><span><small>E-mail</small>cardhero.contato@herois.com</span></a>
+                    <div class="info-item"><span class="info-icone" aria-hidden="true">📍</span><span><small>Localização</small>Gotham City, Brasil</span></div>
+                    <a class="info-item" href="tel:+5541998794560"><span class="info-icone" aria-hidden="true">📞</span><span><small>Telefone</small>(41) 9 9879-4560</span></a>
+                </aside>
+                <form id="formContato" class="form-contato">
+                    <div class="contato-form-intro">
+                        <h2>Envie sua mensagem</h2>
+                        <p>Preencha os campos abaixo para preparar seu e-mail.</p>
+                    </div>
+                    <div class="campo">
+                        <label for="contatoNome">Nome</label>
+                        <input type="text" id="contatoNome" name="nome" autocomplete="name" required>
+                    </div>
+                    <div class="campo">
+                        <label for="contatoEmail">E-mail</label>
+                        <input type="email" id="contatoEmail" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="contatoAssunto">Assunto</label>
+                        <select id="contatoAssunto" name="assunto" required>
+                            <option value="">Selecione...</option>
+                            <option value="Sugestão">Sugestão</option>
+                            <option value="Reportar bug">Reportar bug</option>
+                            <option value="Parceria">Parceria</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    <div class="campo">
+                        <label for="contatoMensagem">Mensagem</label>
+                        <textarea id="contatoMensagem" name="mensagem" rows="5" maxlength="3000" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape"><p>&copy; 2026 Card Hero</p><div class="rodape-links"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="chat.html">Chat</a></div></footer>
+</body>
+</html>
